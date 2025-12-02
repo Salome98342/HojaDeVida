@@ -1,0 +1,29 @@
+[build]
+  # Base directory es donde está tu aplicación frontend
+  base = "frontend"
+  
+  # Comando para construir tu aplicación
+  command = "npm run build"
+  
+  # Directorio donde se genera el build (dist es el default de Vite)
+  publish = "dist"
+
+# Variables de entorno para el build
+[build.environment]
+  NODE_VERSION = "18"
+
+# Redirecciones para SPA (Single Page Application)
+# Esto asegura que todas las rutas funcionen correctamente
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers de seguridad (opcional pero recomendado)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
