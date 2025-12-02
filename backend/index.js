@@ -1,10 +1,8 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import profileRoutes from './routes/profileRoutes.js';
-import skillsRoutes from './routes/skillsRoutes.js';
-import projectsRoutes from './routes/projectsRoutes.js';
-import contactRoutes from './routes/contactRoutes.js';
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const contactRoutes = require('./routes/contactRoutes.js');
+const commissionsRoutes = require('./routes/commissionsRoutes.js');
 
 dotenv.config();
 
@@ -17,10 +15,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use('/api/profile', profileRoutes);
-app.use('/api/skills', skillsRoutes);
-app.use('/api/projects', projectsRoutes);
 app.use('/api/contact', contactRoutes);
+app.use('/api/commissions', commissionsRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
@@ -30,4 +26,5 @@ app.get('/api/health', (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
+  console.log('📝 Endpoints activos: /api/contact y /api/commissions');
 });

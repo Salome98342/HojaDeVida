@@ -1,6 +1,15 @@
-# Frontend - CV/Portfolio Application
+# Frontend - Aplicación de Hoja de Vida
 
-Modern, animated CV/Portfolio frontend built with React, Vite, and Framer Motion.
+Portafolio moderno y animado construido con React, Vite y Framer Motion.
+
+## ⚠️ Arquitectura de Datos
+
+Este frontend tiene **datos hardcodeados** para:
+- ✅ Información personal (perfil)
+- ✅ Habilidades técnicas  
+- ✅ Proyectos del portafolio
+
+Solo el **formulario de contacto** consume la API del backend.
 
 ## Features
 

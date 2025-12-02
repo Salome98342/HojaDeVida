@@ -1,53 +1,38 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { projectsAPI } from '../services/api';
 import './Projects.css';
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetchProjects();
-  }, []);
-
-  const fetchProjects = async () => {
-    try {
-      const response = await projectsAPI.getAll();
-      setProjects(response.data.data || []);
-      setLoading(false);
-    } catch (err) {
-      console.error('Error fetching projects:', err);
-      setLoading(false);
-    }
-  };
-
-  const defaultProjects = [
+  // Proyectos hardcodeados de Salomé
+  const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce application with user authentication, product catalog, and payment integration.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      github_url: 'https://github.com/example/ecommerce',
-      demo_url: 'https://example-ecommerce.com',
+      title: 'Sistema de Gestión Académica',
+      description: 'Sistema completo para gestión académica con módulos de RA (Resultado de Aprendizaje), IL (Indicador de Logro), registro de notas, retroalimentaciones y seguimiento estudiantil. Incluye dashboard administrativo y reportes.',
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'Bootstrap'],
+      github_url: 'https://github.com/Salome98342',
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'Collaborative task management tool with real-time updates and team features.',
-      technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-      github_url: 'https://github.com/example/task-manager',
+      title: 'Sistema Tienda Escolar Maida\'s',
+      description: 'Aplicación web para gestión de tienda escolar con módulos de ventas, sistema de créditos para estudiantes, inventario de productos, gestión de clientes y reportes de ventas.',
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'Express'],
+      github_url: 'https://github.com/Salome98342',
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'Real-time weather application with interactive maps and forecasts.',
-      technologies: ['React', 'OpenWeather API', 'Chart.js'],
-      demo_url: 'https://example-weather.com',
+      title: 'Dashboard Interactivo',
+      description: 'Dashboard moderno con visualización de datos en tiempo real, gráficos interactivos y panel de control para análisis de métricas académicas.',
+      technologies: ['React', 'Chart.js', 'Tailwind CSS', 'Framer Motion'],
+      github_url: 'https://github.com/Salome98342',
+    },
+    {
+      id: 4,
+      title: 'Actividades con Redes Neuronales',
+      description: 'Proyecto de Machine Learning utilizando el dataset CIFAR-10 para clasificación de imágenes con redes neuronales convolucionales.',
+      technologies: ['Python', 'TensorFlow', 'Jupyter Notebook'],
+      github_url: 'https://github.com/Salome98342',
     },
   ];
-
-  const displayProjects = projects.length > 0 ? projects : defaultProjects;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -74,79 +59,71 @@ const Projects = () => {
   return (
     <section className="projects-section" id="projects">
       <div className="container">
-        <motion.h2
-          className="section-title"
+        <motion.div
+          className="section-header-modern"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Featured Projects
-        </motion.h2>
+          <h2 className="section-title-modern">
+            <span className="title-accent">Mis</span>
+            <span className="title-main">Proyectos</span>
+          </h2>
+        </motion.div>
 
-        {loading ? (
-          <div className="loading">Loading projects...</div>
-        ) : (
-          <motion.div
-            className="projects-grid"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {displayProjects.map((project) => (
-              <motion.div
-                key={project.id}
-                className="project-card"
-                variants={itemVariants}
-                whileHover={{ y: -10 }}
-              >
-                {project.image_url && (
-                  <div className="project-image">
-                    <img src={project.image_url} alt={project.title} />
-                  </div>
-                )}
-                <div className="project-content">
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-description">{project.description}</p>
-                  
-                  {project.technologies && (
-                    <div className="project-technologies">
-                      {project.technologies.map((tech, index) => (
-                        <span key={index} className="tech-tag">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                  
-                  <div className="project-links">
-                    {project.github_url && (
-                      <a
-                        href={project.github_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link"
-                      >
-                        <span>GitHub</span>
-                      </a>
-                    )}
-                    {project.demo_url && (
-                      <a
-                        href={project.demo_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link demo"
-                      >
-                        <span>Live Demo</span>
-                      </a>
-                    )}
-                  </div>
+        <motion.div
+          className="projects-grid"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              className="project-card"
+              variants={itemVariants}
+              whileHover={{ y: -10 }}
+            >
+              <div className="project-content">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+                
+                <div className="project-technologies">
+                  {project.technologies.map((tech, index) => (
+                    <span key={index} className="tech-tag">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
+                
+                <div className="project-links">
+                  {project.github_url && (
+                    <a
+                      href={project.github_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      <span>GitHub</span>
+                    </a>
+                  )}
+                  {project.demo_url && (
+                    <a
+                      href={project.demo_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link demo"
+                    >
+                      <span>Demo en Vivo</span>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

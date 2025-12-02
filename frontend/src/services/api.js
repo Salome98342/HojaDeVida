@@ -37,4 +37,13 @@ export const contactAPI = {
   getAll: () => api.get('/contact'),
 };
 
+// Commissions API
+export const commissionsAPI = {
+  submit: (data) => api.post('/commissions', data),
+  getAll: (params) => api.get('/commissions', { params }),
+  getById: (id) => api.get(`/commissions/${id}`),
+  updateStatus: (id, status) => api.patch(`/commissions/${id}/status`, { status }),
+  delete: (id) => api.delete(`/commissions/${id}`),
+};
+
 export default api;

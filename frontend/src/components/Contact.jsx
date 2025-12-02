@@ -29,13 +29,13 @@ const Contact = () => {
       await contactAPI.submit(formData);
       setStatus({
         type: 'success',
-        message: 'Thank you! Your message has been sent successfully.',
+        message: '¡Gracias! Tu mensaje ha sido enviado exitosamente.',
       });
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (err) {
       setStatus({
         type: 'error',
-        message: 'Failed to send message. Please try again later.',
+        message: 'Error al enviar el mensaje. Por favor intenta de nuevo.',
       });
     } finally {
       setLoading(false);
@@ -52,7 +52,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Get In Touch
+          Contacto
         </motion.h2>
 
         <motion.div
@@ -63,10 +63,10 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="contact-info">
-            <h3>Let's Connect</h3>
+            <h3>Conectemos</h3>
             <p>
-              I'm always open to discussing new projects, creative ideas, or
-              opportunities to be part of your vision.
+              Siempre estoy abierta a discutir nuevos proyectos, ideas creativas u
+              oportunidades para colaborar y aprender.
             </p>
             <div className="info-items">
               <motion.div
@@ -76,17 +76,7 @@ const Contact = () => {
                 <span className="info-icon">📧</span>
                 <div>
                   <h4>Email</h4>
-                  <p>your.email@example.com</p>
-                </div>
-              </motion.div>
-              <motion.div
-                className="info-card"
-                whileHover={{ scale: 1.05, x: 10 }}
-              >
-                <span className="info-icon">📱</span>
-                <div>
-                  <h4>Phone</h4>
-                  <p>+1 (555) 123-4567</p>
+                  <p>salomerodriguezmoscoso@gmail.com</p>
                 </div>
               </motion.div>
               <motion.div
@@ -95,8 +85,18 @@ const Contact = () => {
               >
                 <span className="info-icon">📍</span>
                 <div>
-                  <h4>Location</h4>
-                  <p>Your City, Country</p>
+                  <h4>Ubicación</h4>
+                  <p>Colombia</p>
+                </div>
+              </motion.div>
+              <motion.div
+                className="info-card"
+                whileHover={{ scale: 1.05, x: 10 }}
+              >
+                <span className="info-icon">💼</span>
+                <div>
+                  <h4>GitHub</h4>
+                  <p>github.com/Salome98342</p>
                 </div>
               </motion.div>
             </div>
@@ -111,7 +111,7 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="form-group">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">Nombre</label>
               <input
                 type="text"
                 id="name"
@@ -119,12 +119,12 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                placeholder="Your name"
+                placeholder="Tu nombre"
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">Correo Electrónico</label>
               <input
                 type="email"
                 id="email"
@@ -132,24 +132,24 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                placeholder="your.email@example.com"
+                placeholder="tu.correo@ejemplo.com"
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="subject">Subject</label>
+              <label htmlFor="subject">Asunto</label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder="What's this about?"
+                placeholder="¿De qué se trata?"
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">Mensaje</label>
               <textarea
                 id="message"
                 name="message"
@@ -157,7 +157,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 rows="5"
-                placeholder="Your message..."
+                placeholder="Tu mensaje..."
               />
             </div>
 
@@ -177,7 +177,7 @@ const Contact = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              {loading ? 'Sending...' : 'Send Message'}
+              {loading ? 'Enviando...' : 'Enviar Mensaje'}
             </motion.button>
           </motion.form>
         </motion.div>

@@ -11,7 +11,7 @@ const Navigation = () => {
       setScrolled(window.scrollY > 50);
 
       // Detect active section
-      const sections = ['profile', 'skills', 'projects', 'contact'];
+      const sections = ['profile', 'education', 'skills', 'projects', 'certificates', 'art', 'gallery', 'commissions', 'additional', 'contact'];
       const current = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -39,8 +39,12 @@ const Navigation = () => {
 
   const navItems = [
     { id: 'profile', label: 'Home' },
+    { id: 'education', label: 'Educación' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
+    { id: 'certificates', label: 'Certificates' },
+    { id: 'art', label: 'Arte' },
+    { id: 'commissions', label: 'Comisiones' },
     { id: 'contact', label: 'Contact' },
   ];
 

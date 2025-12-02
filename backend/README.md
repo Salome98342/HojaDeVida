@@ -1,13 +1,18 @@
-# Backend - CV/Portfolio API
+# Backend - API de Hoja de Vida
 
-Backend server for the CV/Portfolio application built with Node.js, Express, and Supabase.
+Servidor backend simplificado para la aplicación de portafolio construido con Node.js, Express y Supabase.
 
-## Features
+## ⚠️ Arquitectura Simplificada
 
-- RESTful API for profile, skills, projects, and contacts
-- Supabase integration for database
-- CORS enabled for frontend communication
-- Environment-based configuration
+Este backend solo maneja el **formulario de contacto**. Los datos de perfil, habilidades y proyectos están hardcodeados en el frontend.
+
+## Características
+
+- Endpoint para formulario de contacto
+- Integración con Supabase (solo tabla `messages`)
+- CORS habilitado para comunicación con frontend
+- Validación de datos de formulario
+- Configuración basada en variables de entorno
 
 ## Prerequisites
 
@@ -42,17 +47,16 @@ SUPABASE_ANON_KEY=your_supabase_anon_key
 PORT=3000
 ```
 
-### 3. Set Up Database
+### 3. Configurar Base de Datos
 
-1. Go to your Supabase project dashboard
-2. Navigate to SQL Editor
-3. Run the SQL script from `database/schema.sql` to create the necessary tables
+1. Ve a tu dashboard de Supabase
+2. Navega a SQL Editor
+3. Ejecuta el script SQL de `database/schema.sql` para crear la tabla necesaria
 
-This will create the following tables:
-- `profile` - User profile information
-- `skills` - Skills and technologies
-- `projects` - Portfolio projects
-- `contacts` - Contact form submissions
+Esto creará la tabla:
+- `messages` - Mensajes del formulario de contacto (name, email, subject, message, created_at)
+
+**Nota:** A diferencia de versiones anteriores, solo necesitas esta única tabla. Los datos de perfil, habilidades y proyectos están hardcodeados en el frontend.
 
 ### 4. Run the Server
 
@@ -68,30 +72,22 @@ npm start
 
 The server will run on `http://localhost:3000` by default.
 
-## API Endpoints
+## Endpoints de la API
 
-### Profile
-- `GET /api/profile` - Get profile information
-- `PUT /api/profile` - Update profile information
+### Contacto (Único endpoint activo)
+- `POST /api/contact` - Enviar mensaje de contacto
+  - Body: `{ name, email, subject, message }`
+  - Validación: email válido, campos requeridos
+  - Respuesta: `{ success: true, data: {...}, message: "..." }`
 
-### Skills
-- `GET /api/skills` - Get all skills
-- `POST /api/skills` - Create a new skill
-- `PUT /api/skills/:id` - Update a skill
-- `DELETE /api/skills/:id` - Delete a skill
-
-### Projects
-- `GET /api/projects` - Get all projects
-- `POST /api/projects` - Create a new project
-- `PUT /api/projects/:id` - Update a project
-- `DELETE /api/projects/:id` - Delete a project
-
-### Contact
-- `POST /api/contact` - Submit contact form
-- `GET /api/contact` - Get all contact submissions
+- `GET /api/contact` - Obtener todos los mensajes (opcional, proteger en producción)
+  - Respuesta: Array de mensajes ordenados por fecha
 
 ### Health Check
-- `GET /api/health` - Server health check
+- `GET /api/health` - Verificar estado del servidor
+  - Respuesta: `{ status: "ok", message: "Server is running" }`
+
+**Nota:** Los endpoints de profile, skills y projects han sido removidos ya que esos datos están hardcodeados en el frontend.
 
 ## Project Structure
 
@@ -122,22 +118,39 @@ backend/
 - `SUPABASE_ANON_KEY` - Your Supabase anonymous/public API key
 - `PORT` - Server port (default: 3000)
 
-## Security Notes
+## Notas de Seguridad
 
-- The `.env` file is gitignored and should never be committed
-- Supabase Row Level Security (RLS) is enabled on all tables
-- Public read access is enabled for profile, skills, and projects
-- Contact form allows public insert access
-- For admin operations (create/update/delete), you should implement authentication
+- El archivo `.env` está en gitignore y nunca debe ser commiteado
+- Supabase Row Level Security (RLS) está habilitado en la tabla `messages`
+- El formulario de contacto permite inserciones públicas (cualquiera puede enviar mensajes)
+- Para ver mensajes (GET /api/contact), considera implementar autenticación en producción
+- Validación de email y campos requeridos implementada en el controlador
 
-## Development
+## Desarrollo
 
-To add new features:
+Para agregar nuevas funcionalidades:
 
-1. Create a new controller in `controllers/`
-2. Create corresponding routes in `routes/`
-3. Import and use the routes in `index.js`
-4. Update the database schema if needed
+1. Crea un nuevo controlador en `controllers/`
+2. Crea las rutas correspondientes en `routes/`
+3. Importa y usa las rutas en `index.js`
+4. Actualiza el schema de base de datos si es necesario
+
+## Solución de Problemas
+
+**Warning "Supabase credentials not configured":**
+- Asegúrate de haber creado un archivo `.env`
+- Verifica que tu URL y key de Supabase sean correctas
+- Confirma que el archivo `.env` esté en el directorio raíz del backend
+
+**Error al enviar formulario:**
+- Verifica que el servidor esté corriendo
+- Revisa que la tabla `messages` exista en Supabase
+- Confirma que las credenciales de Supabase sean correctas
+- Revisa los logs del servidor para más detalles
+
+**CORS errors:**
+- El CORS ya está configurado para permitir peticiones del frontend
+- Si usas un dominio personalizado, actualiza la configuración de CORS en `index.js`
 
 ## Troubleshooting
 

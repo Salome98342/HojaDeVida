@@ -1,23 +1,23 @@
-# HojaDeVida - CV/Portfolio Application
+# 🎨 Hoja de Vida - Salomé Rodríguez Moscoso
 
-A modern, full-stack CV/Portfolio web application with gradient design, smooth animations, and dynamic content management.
+Aplicación web moderna de CV/Portafolio con diseño gradient, animaciones suaves y contenido personalizado.
 
-## 🚀 Features
+## 🚀 Características
 
-- **Frontend**: React + Vite with Framer Motion animations
-- **Backend**: Node.js + Express RESTful API
-- **Database**: Supabase (PostgreSQL)
-- **Design**: Gradient color schemes with dark theme
-- **Animations**: Smooth transitions and effects with Framer Motion
-- **Responsive**: Mobile-first design that works on all devices
-- **Dynamic**: All content is managed through Supabase database
+- **Frontend**: React + Vite con animaciones de Framer Motion
+- **Backend**: API RESTful con Node.js + Express
+- **Base de datos**: Supabase (PostgreSQL) - Solo para formulario de contacto
+- **Diseño**: Esquemas de colores degradados modernos
+- **Animaciones**: Transiciones suaves con Framer Motion
+- **Responsive**: Diseño mobile-first
+- **Contenido**: Datos de perfil, habilidades y proyectos hardcodeados (no requieren BD)
 
-## 📋 Sections
+## 📋 Secciones
 
-1. **Profile** - Personal information, bio, and contact details
-2. **Skills** - Technical skills with progress bars and categories
-3. **Projects** - Portfolio projects with images, descriptions, and links
-4. **Contact** - Contact form with validation and submission to database
+1. **Perfil** - Información personal, biografía y datos de contacto (hardcodeado)
+2. **Habilidades** - Skills técnicas con barras de progreso y categorías (hardcodeado)
+3. **Proyectos** - Portafolio de proyectos con descripciones y enlaces (hardcodeado)
+4. **Contacto** - Formulario de contacto con validación y envío a Supabase
 
 ## 🛠️ Tech Stack
 
@@ -36,10 +36,10 @@ A modern, full-stack CV/Portfolio web application with gradient design, smooth a
 - CORS
 - dotenv
 
-### Database
-- Supabase (PostgreSQL)
+### Base de datos
+- Supabase (PostgreSQL) - Solo tabla `messages`
 - Row Level Security (RLS)
-- Real-time capabilities
+- Datos de perfil, skills y proyectos hardcodeados en frontend
 
 ## 📦 Project Structure
 
@@ -113,16 +113,19 @@ See [frontend/README.md](frontend/README.md) for detailed frontend setup instruc
 - Frontend: http://localhost:5173
 - Backend API: http://localhost:3000
 
-## 📊 Database Schema
+## 📊 Esquema de Base de Datos
 
-### Tables
+### Arquitectura de Datos
 
-- **profile**: User profile information (name, title, bio, contact info, social links)
-- **skills**: Skills and technologies with levels and categories
-- **projects**: Portfolio projects with descriptions, technologies, and links
-- **contacts**: Contact form submissions
+**Datos Hardcodeados (Frontend):**
+- ✅ **Perfil**: Información personal de Salomé (nombre, título, bio, email, ubicación)
+- ✅ **Habilidades**: Skills organizadas por categorías (Frontend, Backend, Bases de datos, etc.)
+- ✅ **Proyectos**: Portafolio de proyectos académicos y personales
 
-See `backend/database/schema.sql` for the complete schema.
+**Datos en Supabase:**
+- 📧 **messages**: Mensajes del formulario de contacto (name, email, subject, message, created_at)
+
+Ver `backend/database/schema.sql` para el esquema completo de la tabla messages.
 
 ## 🎨 Customization
 
@@ -139,39 +142,28 @@ Edit the CSS variables in `frontend/src/index.css`:
 }
 ```
 
-### Adding Your Data
+### Personalización de Contenido
 
-1. Access your Supabase project dashboard
-2. Go to Table Editor
-3. Add your information to the respective tables:
-   - Profile: Your personal information
-   - Skills: Your technical skills
-   - Projects: Your portfolio projects
-   - Contacts: View contact form submissions
+**Para modificar tu información personal:**
+1. Edita `frontend/src/components/Profile.jsx` - Datos personales
+2. Edita `frontend/src/components/Skills.jsx` - Tus habilidades
+3. Edita `frontend/src/components/Projects.jsx` - Tus proyectos
 
-Alternatively, use the backend API endpoints to manage data programmatically.
+**Para ver mensajes de contacto:**
+1. Accede a tu dashboard de Supabase
+2. Ve a Table Editor
+3. Abre la tabla `messages` para ver los mensajes recibidos
 
 ## 📡 API Endpoints
 
-### Profile
-- `GET /api/profile` - Get profile
-- `PUT /api/profile` - Update profile
+### Contact (Único endpoint activo)
+- `POST /api/contact` - Enviar mensaje de contacto
+- `GET /api/contact` - Obtener todos los mensajes (opcional, proteger con auth)
 
-### Skills
-- `GET /api/skills` - List all skills
-- `POST /api/skills` - Create skill
-- `PUT /api/skills/:id` - Update skill
-- `DELETE /api/skills/:id` - Delete skill
+### Health Check
+- `GET /api/health` - Verificar estado del servidor
 
-### Projects
-- `GET /api/projects` - List all projects
-- `POST /api/projects` - Create project
-- `PUT /api/projects/:id` - Update project
-- `DELETE /api/projects/:id` - Delete project
-
-### Contact
-- `POST /api/contact` - Submit contact form
-- `GET /api/contact` - Get all submissions
+**Nota**: Los endpoints de profile, skills y projects han sido removidos ya que esos datos están hardcodeados en el frontend.
 
 ## 🔒 Security
 
@@ -215,14 +207,17 @@ Make sure to set these in your deployment platform:
 
 ISC
 
-## 👤 Author
+## 👤 Autora
 
-Add your information here after setting up your profile!
+**Salomé Rodríguez Moscoso**
+- 📧 Email: salomerodriguezmoscoso@gmail.com
+- 💻 GitHub: [@Salome98342](https://github.com/Salome98342)
+- 🎓 Estudiante de Desarrollo de Software
 
-## 🤝 Contributing
+## 🤝 Contribuciones
 
-This is a personal portfolio project. Feel free to fork and customize for your own use.
+Este es un proyecto de portafolio personal. Siéntete libre de hacer fork y personalizar para tu propio uso.
 
-## 📧 Contact
+## 📧 Contacto
 
-Use the contact form on the application to get in touch!
+¡Usa el formulario de contacto en la aplicación para comunicarte conmigo!
