@@ -1,0 +1,362 @@
+================================================================================
+                    DATOS PERSONALES COMPLETOS
+                    Salomé Rodríguez Moscoso
+================================================================================
+
+📝 INFORMACIÓN PERSONAL
+================================================================================
+
+Nombre completo:     Salomé Rodríguez Moscoso
+Título profesional:  Tecnóloga en Desarrollo de Software
+Email:               salomerodriguezmoscoso@gmail.com
+Teléfono:            +57 321 868 7856
+Ubicación:           Caicedonia, Valle del Cauca - Colombia
+GitHub:              https://github.com/Salome98342
+LinkedIn:            https://linkedin.com/in/salome-rodriguez-moscoso-ab293a381
+Portafolio de Arte:  https://atom.bio/clownmm
+
+
+📖 BIOGRAFÍA
+================================================================================
+
+Estudiante apasionada por el desarrollo de software, con interés en el 
+desarrollo web, bases de datos y creación de soluciones tecnológicas que 
+aporten valor real. Me caracterizo por mi compromiso, capacidad de aprendizaje 
+y habilidades para el acompañamiento académico y socioeducativo. Me motiva 
+seguir creciendo profesionalmente mediante trabajo colaborativo, creatividad y 
+aplicación de buenas prácticas de programación.
+
+
+🎓 EDUCACIÓN
+================================================================================
+
+1. Tecnología en Desarrollo de Software
+   Institución:    Universidad del Valle
+   Período:        2023 - Presente
+   Ubicación:      Caicedonia, Valle del Cauca
+   Estado:         En curso
+   Descripción:    Enfoque en desarrollo web, bases de datos, ingeniería de 
+                   software, teoría general de sistemas e impactos ambientales 
+                   de la tecnología.
+
+2. Bachiller Técnico en Agroindustria Alimentaria
+   Institución:    Institución Educativa Bolivariano
+   Estado:         Graduada
+   Ubicación:      Caicedonia, Valle del Cauca
+   Descripción:    Formación en procesos productivos e industriales del sector 
+                   alimentario.
+
+
+💼 EXPERIENCIA LABORAL
+================================================================================
+
+1. Monitora Socioeducativa - ASES (2025)
+   Proceso de acompañamiento académico, realización de fichas, talleres, 
+   relatorías y seguimiento a estudiantes. Apoyo en procesos educativos y 
+   desarrollo de habilidades socioemocionales.
+
+   Responsabilidades:
+   - Elaboración de informes y relatorías
+   - Seguimiento académico a estudiantes
+   - Facilitación de talleres educativos
+   - Gestión de fichas de seguimiento
+
+2. Desarrollo de Sistemas Académicos (2025)
+   Construcción de un sistema completo de gestión académica utilizando 
+   tecnologías modernas.
+
+   Proyecto: Sistema de Gestión Académica
+   - Desarrollo con React, Node.js y PostgreSQL
+   - Módulos de RA (Resultados de Aprendizaje)
+   - Sistema de IL (Indicadores de Logro)
+   - Registro y gestión de notas
+   - Sistema de retroalimentaciones
+   - Dashboard administrativo
+
+   Stack técnico:
+   - Frontend: React + Bootstrap
+   - Backend: Node.js + Express
+   - Base de datos: PostgreSQL
+   - Control de versiones: Git/GitHub
+
+3. Sistema para Tienda Escolar Maida's (2025)
+   Desarrollo completo de un sistema de gestión para tienda escolar con 
+   múltiples módulos.
+
+   Módulos desarrollados:
+   - 💰 Sistema de ventas en tiempo real
+   - 💳 Gestión de créditos para estudiantes
+   - 📦 Inventario de productos
+   - 👥 Gestión de clientes
+   - 📊 Reportes y análisis de ventas
+
+   Stack técnico:
+   - Frontend: React
+   - Backend: Node.js + Express
+   - Base de datos: PostgreSQL
+   - Supabase para backend-as-a-service
+
+
+🛠️ HABILIDADES TÉCNICAS
+================================================================================
+
+Frontend & Diseño:
+------------------
+- HTML & CSS                    (Nivel: Intermedio)
+- Animaciones CSS              (Nivel: Intermedio)
+- JavaScript                   (Nivel: Intermedio)
+- React                        (Nivel: Intermedio)
+  * Hooks, Context API, componentes funcionales
+- Bootstrap                    (Nivel: Intermedio)
+  * Diseño responsive y componentes
+- Tailwind CSS                 (Nivel: Intermedio)
+  * Utility-first CSS framework
+- Framer Motion                (Nivel: Intermedio)
+  * Animaciones y transiciones
+- APIs                         (Nivel: Intermedio)
+  * Consumo y manejo de APIs REST
+- Componentización             (Nivel: Avanzado)
+  * Arquitectura de componentes reutilizables
+- Dashboards                   (Nivel: Intermedio)
+  * Visualización de datos y métricas
+- Diseño UI                    (Nivel: Intermedio)
+
+Backend:
+--------
+- Node.js                      (Nivel: Intermedio)
+  * Desarrollo de servidores y APIs
+- Express                      (Nivel: Intermedio)
+  * Framework web para Node.js
+- JWT                          (Nivel: Intermedio)
+  * Autenticación y autorización
+- Routing                      (Nivel: Intermedio)
+  * Manejo de rutas y controladores
+- Django                       (Nivel: Básico/Intermedio)
+  * Bases conceptuales (Python framework)
+
+Bases de Datos:
+---------------
+- PostgreSQL                   (Nivel: Intermedio)
+  * Bases de datos relacionales
+- Supabase                     (Nivel: Intermedio)
+  * Backend-as-a-Service
+- Modelado de BD               (Nivel: Intermedio)
+  * Diseño de esquemas y tablas
+- CRUD                         (Nivel: Avanzado)
+  * Operaciones de bases de datos
+- Triggers                     (Nivel: Intermedio)
+  * Automatización de procesos
+
+Lenguajes de Programación:
+---------------------------
+- Python                       (Nivel: Intermedio)
+- C                           (Nivel: Básico)
+
+Herramientas:
+-------------
+- Git                          (Nivel: Intermedio)
+- GitHub                       (Nivel: Intermedio)
+- Diagramación UML             (Nivel: Intermedio)
+- APIs                         (Nivel: Intermedio)
+- CRUDs                        (Nivel: Avanzado)
+
+
+🌟 HABILIDADES BLANDAS (SOFT SKILLS)
+================================================================================
+
+- Comunicación asertiva
+- Empatía y acompañamiento
+- Resolución de problemas
+- Adaptabilidad
+- Organización
+- Aprendizaje continuo
+- Trabajo en equipo
+- Creatividad
+- Acompañamiento académico - Experiencia en tutoría y seguimiento estudiantil
+- Elaboración de informes - Redacción técnica y profesional
+- Relatorías - Documentación de reuniones y actividades
+- Trabajo en equipo - Colaboración en proyectos multidisciplinarios
+- Comunicación efectiva - Presentación de proyectos e ideas
+
+
+💻 PROYECTOS DESTACADOS
+================================================================================
+
+1. Sistema de Gestión Académica
+   Descripción:   Sistema completo para gestión académica con módulos de RA 
+                  (Resultado de Aprendizaje), IL (Indicador de Logro), registro 
+                  de notas, retroalimentaciones y seguimiento estudiantil. 
+                  Incluye dashboard administrativo y reportes.
+   Tecnologías:   React, Node.js, PostgreSQL, Bootstrap
+   GitHub:        https://github.com/Salome98342
+
+   Características:
+   - Dashboard interactivo
+   - Gestión de RA e IL
+   - Sistema de calificaciones
+   - Retroalimentación personalizada
+   - Reportes académicos
+
+2. Sistema Tienda Escolar Maida's
+   Descripción:   Aplicación web para gestión de tienda escolar con módulos de 
+                  ventas, sistema de créditos para estudiantes, inventario de 
+                  productos, gestión de clientes y reportes de ventas.
+   Tecnologías:   React, Node.js, PostgreSQL, Express
+   GitHub:        https://github.com/Salome98342
+
+   Características:
+   - Punto de venta
+   - Sistema de créditos
+   - Inventario automatizado
+   - Gestión de clientes
+   - Reportes de ventas
+
+3. Dashboard Interactivo
+   Descripción:   Dashboard moderno con visualización de datos en tiempo real, 
+                  gráficos interactivos y panel de control para análisis de 
+                  métricas académicas.
+   Tecnologías:   React, Chart.js, Tailwind CSS, Framer Motion
+   GitHub:        https://github.com/Salome98342
+
+   Características:
+   - Gráficos interactivos
+   - Animaciones fluidas
+   - Diseño responsive
+   - Visualización de métricas
+
+4. Actividades con Redes Neuronales
+   Descripción:   Proyecto de Machine Learning utilizando el dataset CIFAR-10 
+                  para clasificación de imágenes con redes neuronales 
+                  convolucionales.
+   Tecnologías:   Python, TensorFlow, Jupyter Notebook
+   GitHub:        https://github.com/Salome98342
+
+   Características:
+   - Clasificación de imágenes
+   - Redes neuronales convolucionales
+   - Análisis de datasets
+   - Optimización de modelos
+
+
+🏆 CERTIFICACIONES
+================================================================================
+
+1. Full-Stack Empresarial Spring y Angular
+   Emisor:        DevSeniorCode
+   Fecha:         2025
+   Duración:      6 horas
+   Credencial:    DSC-SPRING-ANGULAR-2024
+   
+   Descripción:   Certificación en desarrollo Full Stack con Spring Framework 
+                  y Angular. Construcción de aplicaciones empresariales con 
+                  arquitectura REST, gestión de bases de datos, autenticación 
+                  JWT y despliegue en producción.
+   
+   Habilidades:   Spring Boot, Angular, Java, TypeScript, REST API
+
+
+🌍 IDIOMAS
+================================================================================
+
+- Español                      (Nivel: Nativo - 100%)
+- Inglés                       (Nivel: Intermedio - 65%)
+
+
+🎨 INTERESES Y HOBBIES
+================================================================================
+
+Áreas de Interés:
+-----------------
+- Dibujo: El dibujo inspira mi creatividad
+- Música: Fortalece mi interés por el diseño
+- Videojuegos: Sistemas interactivos
+- Experimentación: Artística y tecnológica
+- Diseño web y UI/UX
+- Interfaces usables y accesibles
+- Desarrollo de dashboards
+- Sistemas de gestión empresarial
+- Machine Learning y AI
+- Automatización de procesos
+
+Hobbies:
+--------
+- 🖌️ Dibujo digital y tradicional
+- 🎼 Música
+- 🎮 Videojuegos
+- 💻 Proyectos personales
+- ✍️ Escritura creativa
+- 🎨 Diseño visual
+
+Motivación:
+-----------
+Me apasiona el dibujo, la música y los videojuegos, actividades que inspiran 
+mi creatividad y fortalecen mi interés por el diseño y la programación de 
+sistemas interactivos. También disfruto la experimentación artística y 
+tecnológica.
+
+
+🎯 OBJETIVOS PROFESIONALES
+================================================================================
+
+- Consolidar conocimientos en desarrollo full-stack
+- Especializarse en arquitectura de software
+- Contribuir a proyectos open source
+- Desarrollar soluciones innovadoras
+- Continuar aprendiendo nuevas tecnologías
+
+
+🎨 SERVICIOS DE COMISIONES ARTÍSTICAS
+================================================================================
+
+Tipos de Comisiones Disponibles:
+
+1. Character Sheet
+   Precio:        Desde $50 USD
+   Descripción:   Diseño completo de personaje con vistas múltiples
+
+2. Fan Art
+   Precio:        Desde $30 USD
+   Descripción:   Ilustración de tu personaje favorito
+
+3. Retrato Digital
+   Precio:        Desde $40 USD
+   Descripción:   Retrato digital personalizado
+
+4. Cuerpo Completo
+   Precio:        Desde $60 USD
+   Descripción:   Ilustración de cuerpo completo con fondo
+
+Información Importante:
+- Los precios son aproximados y pueden variar según la complejidad
+- Tiempo de entrega: 1-3 semanas
+- Incluye hasta 3 revisiones
+- Recibirás actualizaciones durante el proceso
+- 50% anticipo, 50% al finalizar
+
+
+================================================================================
+                            NOTAS FINALES
+================================================================================
+
+Este documento contiene toda la información personal y profesional de 
+Salomé Rodríguez Moscoso, extraída de su portafolio web.
+
+Datos sensibles no incluidos en la web pública:
+- ❌ Número de cédula (dato sensible)
+- ❌ Dirección residencial específica
+- ✅ Teléfono personal (incluido)
+
+Fuentes de información:
+- Archivo DATOS_PERSONALES.md
+- Componente Profile.jsx
+- Componente Skills.jsx
+- Componente Projects.jsx
+- Componente Education.jsx
+- Componente Additional.jsx
+- Componente Certificates.jsx
+- Componente Commissions.jsx
+
+================================================================================
+Generado: 2025-12-08
+Portafolio: https://github.com/Salome98342/HojaDeVida
+================================================================================
